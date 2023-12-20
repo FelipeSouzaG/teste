@@ -1,4 +1,3 @@
-<<<<<<< HEAD:.vscode/style.css
 * {
   /* esse comando é para retirar todos as medidas de bordas aplicadas automaticamento do navegador */
   margin: 0;
@@ -6,7 +5,7 @@
 
   /* para que sejam aplicadas as bordas e margens que for estipuladas no CSS*/
   box-sizing: border-box;
-}
+} 
 
 /*root é comando raiz para definir em todo css */
 :root {
@@ -61,7 +60,7 @@ body * {
   /*border: 1px solid red;*/
   /* margin pode receber até 4 atributos
   margin: px_em_top px_em_rigth px_em_bottom px_em_left*/
-  margin: 56px auto 0;
+  margin: 0px auto 0;
   padding: 0 24px;
 }
 
@@ -164,7 +163,7 @@ ul li a:hover {
 #social-links {
   display: flex;
   justify-content: center;
-  padding: 24px 0;
+  padding: 8px 0;
   font-size: 24px;
 }
 
@@ -216,222 +215,3 @@ footer {
     left: 0;
   }
 }
-=======
-* {
-  /* esse comando é para retirar todos as medidas de bordas aplicadas automaticamento do navegador */
-  margin: 0;
-  padding: 0;
-
-  /* para que sejam aplicadas as bordas e margens que for estipuladas no CSS*/
-  box-sizing: border-box;
-}
-
-/*root é comando raiz para definir em todo css */
-:root {
-  /* comando abaixo definindo variavel para css - cor*/
-  --text-color: white;
-  /* comando abaixo definindo variavel para fundo backgroud */
-  --bg-url: url(./assets/bg-mobile.jpg);
-  /* comando abaixo definindo variavel para cor de borda */
-  --stroke-color: rgba(255, 255, 255, 0.5);
-  /* comando abaixo definindo variavel para cor de botoes */
-  --surface-color: rgba(255, 255, 255, 0.1);
-  /* comando abaixo definindo variavel para hover dos botoes*/
-  --surface-color-hover: rgba(0, 0, 0, 0.02);
-  /* comando abaixo definindo hover social-links */
-  --highlight-color: rgba(255, 255, 255, 0.2);
-  /* comando abaixo definindo backgroud botao switch */
-  --switch-bg-url: url(./assets/moon.svg);
-}
-
-/* .ligth para mudar tela obs.: definido na tag html class */
-.light {
-  --text-color: black;
-  --bg-url: url(./assets/bg-mobile-light.jpg);
-  --stroke-color: rgba(0, 0, 0, 0.5);
-  --surface-color: rgba(255, 255, 255, 0.05);
-  --surface-color-hover: rgba(0, 0, 0, 0.2);
-  --highlight-color: rgba(0, 0, 0, 0.1);
-  --switch-bg-url: url(./assets/sun.svg);
-}
-
-body {
-  /*
-  background-image: url(./assets/bg-mobile.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  */
-
-  background: var(--bg-url) no-repeat top center/cover;
-  height: 100vh;
-}
-
-body * {
-  font-family: "Inter", sans-serif;
-  color: var(--text-color);
-}
-
-#container {
-  width: 100%;
-  max-width: 588px;
-  height: 712px;
-  /*border: 1px solid red;*/
-  /* margin pode receber até 4 atributos
-  margin: px_em_top px_em_rigth px_em_bottom px_em_left*/
-  margin: 56px auto 0px;
-  padding: 0 24px;
-}
-
-#profile {
-  /* alinhar avatar ao centro utilizando um comando de texto posi imagens tem propriedade inline (em linha)*/
-  text-align: center;
-  padding: 24px;
-}
-
-#profile img {
-  width: 125px;
-}
-
-#profile p {
-  font-weight: 500;
-  line-height: 24px;
-  margin-top: 8px;
-}
-
-#switch {
-  position: relative;
-  width: 64px;
-  margin: 4px auto;
-}
-
-#switch button {
-  width: 32px;
-  height: 32px;
-  background: white var(--switch-bg-url) no-repeat center;
-  border: 0;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  /* comando abaixo para sobrepor camadas de objetos exe.: z=0 1ª camada z=1 2ª camada*/
-  z-index: 1;
-  transform: translateY(-50%);
-  animation: slide-back 0.2s;
-}
-
-.light #switch button {
-  animation: slide 0.2s forwards;
-}
-
-#switch button:hover {
-  outline: 8px solid var(--highlight-color);
-}
-
-#switch span {
-  display: block;
-  width: 64px;
-  height: 24px;
-  background: var(--surface-color);
-  border: 1px solid var(--stroke-color);
-  backdrop-filter: blur 4px;
-  -webkit-backdrop-filter: blur 4px;
-  border-radius: 9999px;
-}
-
-ul {
-  /* comando abaixo para tirar o ponto na frente dos itens da lista*/
-  list-style: none;
-
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 24px 0;
-}
-
-ul li a {
-  display: flex;
-  /* comando abaixo para centralizar em Z */
-  align-items: center;
-  /* comando abaixo para justificar / centralizar em X */
-  justify-content: center;
-  padding: 16px 24px;
-  background: var(--surface-color);
-  border: 1px solid var(--stroke-color);
-  border-radius: 8px;
-  /* comando abaixo para colocar um embaçamento nos botoes dos links da lista */
-
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-
-  /* comando abaixo para retirar a linha do texto dos botoes no formato link*/
-  text-decoration: none;
-  font-weight: 500;
-
-  /*comando abaixo para transição do hover */
-  transition: background 0.3s;
-}
-
-ul li a:hover {
-  /*atributo hover para mudar o comportamento dos botoes ao passar o mouse */
-
-  background: var(--surface-color-hover);
-  border: 1.5px solid var(--text-color);
-}
-
-#social-links {
-  display: flex;
-  justify-content: center;
-  padding: 24px 0;
-  font-size: 24px;
-}
-
-#social-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-  transition: background 0.2s;
-  border-radius: 50%;
-}
-
-#social-links a:hover {
-  background: var(--highlight-color);
-}
-
-footer {
-  padding: 24px 0;
-  text-align: center;
-  font-size: 14px;
-}
-
-/* media queries obs: tem que haver a tag meta viewport no html */
-@media (min-width: 700px) {
-  :root {
-    --bg-url: url(./assets/bg-desktop.jpg);
-  }
-
-  .light {
-    --bg-url: url(./assets/bg-desktop-light.jpg);
-  }
-}
-
-/* animation  - botao slide */
-@keyframes slide {
-  from {
-    left: 0;
-  }
-  to {
-    left: 50%;
-  }
-}
-
-@keyframes slide-back {
-  from {
-    left: 50%;
-  }
-  to {
-    left: 0;
-  }
-}
->>>>>>> 8dcfcaf7a8be362f0b376513b893658006a963db:style.css
