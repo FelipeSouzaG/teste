@@ -60,7 +60,7 @@ body * {
   /*border: 1px solid red;*/
   /* margin pode receber até 4 atributos
   margin: px_em_top px_em_rigth px_em_bottom px_em_left*/
-  margin: 56px auto 0px;
+  margin: 56px auto 0;
   padding: 0 24px;
 }
 
